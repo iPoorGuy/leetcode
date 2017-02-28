@@ -26,8 +26,9 @@ class Solution {
     void fun(TreeNode* node, int sum, int count, bool& flag)
     {
       count += node->val;
-      if(count > sum)
-        return;
+      //不能这么判断，sum可能为负数
+      //if(count > sum)
+      //  return;
       if(count == sum && node->left == NULL && node->right == NULL)
       {
         flag = true;
